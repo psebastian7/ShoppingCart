@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="carrito.html"></script>
+         <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <script>
+            //Script carrito
+            var carrito;
+            function martillo(){
+                 var cantidad=document.getElementById("cantmartillo").value;
+                 
+ 
+        
+        if (!/^([0-9])*$/.test(cantidad)) {
+    alert("Debe ingresar solo numeros");
+}else{
+                if (cantidad < 1) {
+                    alert("Debe ingresar una cantidad mayor a 0");
+    
+}else{
+               var precio=document.getElementById("preciomartillo").value;
+               var nombre=document.getElementById("martillo").value;
+              
+               var martillo2=["Productos: "+nombre + "<br>" + "Precio:" +precio +"<br>" + "Cantidad: "+cantidad];
+               document.getElementById("carritomartillo").innerHTML=martillo2;
+                
+            }
+            }
+        }
+            function sierra(){
+                                var cantidad=document.getElementById("cantsierra").value;
+                                
+                       if (!/^([0-9])*$/.test(cantidad)) {
+    alert("Debe ingresar solo numeros");
+}else{                 
+                if (cantidad < 1) {
+                    alert("Debe ingresar una cantidad mayor a 0");
+    
+}else{
+                var nombre=document.getElementById("sierra").value;
+                var precio=document.getElementById("preciosierra").value;
+               
+                var sierra2=[" <br>Producto: "+nombre + "<br>" + "Precio:" +precio +"<br>" + "Cantidad: "+cantidad];
+                document.getElementById("carritosierra").innerHTML=sierra2;
+            }
+        }
+    }
+    
+    
+            function lijadora(){
+           var cantidad=document.getElementById("cantlijadora").value;
+                                            if (!/^([0-9])*$/.test(cantidad)) {
+    alert("Debe ingresar solo numeros");
+}else{                         
+                if (cantidad < 1) {
+                    alert("Debe ingresar una cantidad mayor a 0");
+    
+}else{
+                var nombre=document.getElementById("lijadora").value;
+                var precio=document.getElementById("preciolijadora").value;
+                
+                var lijadora2=[" <br>Producto: "+nombre + "<br>" + "Precio:" +precio +"<br>" + "Cantidad: "+cantidad];
+                document.getElementById("carritolijadora").innerHTML=lijadora2;     
+            }
+        }
+    }
+           
+    
+    
+    
+    
+    
+               function taladro(){
+                   
+                      var cantidad=document.getElementById("canttaladro").value;
+                                         if (!/^([0-9])*$/.test(cantidad)) {
+    alert("Debe ingresar solo numeros");
+}else{
+                                            
+                if (cantidad < 1) {
+                    alert("Debe ingresar una cantidad mayor a 0");
+    
+}else{
+                var nombre=document.getElementById("taladro").value;
+                var precio=document.getElementById("preciotaladro").value;
+      
+                var taladro2=[" <br>Producto: "+nombre + "<br>" + "Precio:" +precio +"<br>" + "Cantidad: "+cantidad];
+                document.getElementById("carritotaladro").innerHTML=taladro2;  
+            }
+      
+        }
+    }    
+            </script>
+      
+        
+         <h2>Productos</h2>
+            <section>
+            <h3>Herramientas manuales</h3>
+            <article>
+               
+                  <fieldset id="martillos">
+                </fieldset>
+                <input type="button" name="btnComprar1" id="btnComprar1" value="Comprar" onclick="martillo()">
+            </article>
+            <br>
+            <br>
+            <br>
+            <br>
+            <article>
+                  <fieldset id="sierras">
+              </fieldset>
+                <input type="button" name="btnComprar2" id="btnComprar2" value="Comprar" onclick="sierra()">               
+            </article>
+            </section>
+         <br>
+         <br>
+         <br>
+         <br>
+         <section>
+             <h3>Herramientas electricas</h3>
+             <article>
+                 
+                <fieldset id="lijadoras">
+        </fieldset> 
+                 <input type="button" name="btnComprar3" id="btnComprar3" value="Comprar" onclick="lijadora()">
+            </article>
+             <br>
+             <br>
+             <br>
+             <br>
+             <article>
+                     <fieldset id="taladros">
+        </fieldset> 
+                 <input type="button" name="btnComprar4" id="btnComprar4" value="Comprar" onclick="taladro()">  
+             </article>
+             <br>
+             <br>
+             <br>
+             <br>
+        </section>
+            <section>
+                <h2>Carrito de Compras</h2>
+                <article id="carritomartillo">
+                    </article>
+                <article id="carritosierra">
+                    </article>
+                <article id="carritolijadora">
+                    </article>
+                <article id="carritotaladro">
+                    </article>
+            </section>
+    
+       
+       
+        
+        
+        
+        <script>
+            // IMPORTANTE: script de productos
+            var martillo1=["<img src=img/h_manuales/martillo.jpg>\n\
+        <form method=POST action=carrito.html name=formulario1><label>Nombre:</label><input type=text name=martillo id=martillo readonly value=Martillo >\n\
+        <label>Precio:    $ </label><input type=text name= preciomartillo id=preciomartillo readonly value=4000 >\n\
+<br>    <label>Cantidad<label>      <input type=text name=cantmartillo id= cantmartillo placeholder=Ingrese>\n\
+                                      </form>"];
+
+                
+                var sierra1=["<img src=img/h_manuales/sierra.jpg>\n\
+        <form method=POST action=carrito.html name=formulario2><label>Nombre:</label><input type=text name=sierra id=sierra readonly value=Sierra >\n\
+        <label>Precio:    $ </label><input type=text name=preciosierra id=preciosierra readonly value=5000>\n\
+<br>    <label>Cantidad<label>      <input type=text name=cantsierra id=cantsierra placeholder=Ingrese>\n\
+                                        </form>"];
+
+    
+    
+    
+  
+            document.getElementById("martillos").innerHTML= martillo1;
+            document.getElementById("sierras").innerHTML= sierra1;
+            
+          
+                      var lijadora1=["<img src=img/h_electricas/lijadora.jpg>\n\
+        <form method=POST action=carrito.html name=formulario3><label>Nombre:</label><input type=text name=lijadora id=lijadora readonly value=Lijadora >\n\
+        <label>Precio:    $ </label><input type=text name= preciolijadora id=preciolijadora readonly value=4000 >\n\
+<br>    <label>Cantidad<label>      <input type=text name=cantlijadora id=cantlijadora placeholder=Ingrese>\n\
+                                                          </form>"];
+
+        var taladro1=["<img src=img/h_manuales/taladro.jpg>\n\
+        <form method=POST action=carrito.html name=formulario4><label>Nombre:</label><input type=text name=taladro id=taladro readonly value=Taladro >\n\
+        <label>Precio:    $ </label><input type=text name=preciosierra id=preciotaladro readonly value=5000>\n\
+<br>    <label>Cantidad<label>      <input type=text name=canttaladro id=canttaladro placeholder=Ingrese>\n\
+                                                          </form>"];
+    
+            document.getElementById("lijadoras").innerHTML= lijadora1;
+            document.getElementById("taladros").innerHTML= taladro1;
+          
+          
+          
+        </script>
+            
+    </body>
+</html>
